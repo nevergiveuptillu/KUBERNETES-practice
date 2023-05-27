@@ -26,6 +26,7 @@
   docker version
   sudo -i
   ```
+  
   ![preview](images\k8s1.PNG)
   
 # rootuser
