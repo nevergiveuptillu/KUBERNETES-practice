@@ -1,0 +1,140 @@
+# manifest for httpd
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: httpd
+spec:
+  containers:
+  - name: httpd
+    image: httpd
+    ports:
+    - containerPort: 80
+---
+# manifest for jenkins
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: jenkins
+spec:
+  containers:
+  - name: jenkins
+    image: jenkins/jenkins
+    ports:
+    - containerPort: 8080
+
+# api reference yaml writing 
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: httpd:pod
+spec:
+  containers:
+    - name: httpd-container
+      image: httpd:2
+      ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: alpine
+spec:
+  containers:
+    - name: alpine
+      image: alpine:3.18
+      args:
+        - sleep
+        - 1d
+---
+# Kubectl autocomplete
+``` .md
+source <(kubectl completion bash) # set up autocomplete in bash into the current shell, bash-completion package should be installed first.
+echo "source <(kubectl completion bash)" >> ~/.bashrc # add autocomplete permanently to your bash shell.
+```
+git clone ---own resource
+kubectl apply -f
+kubectl get <api-resource>
+kubectl describe <kind> <name> 
+kubectl get <kind> <name> -o yaml
+
+#exercises
+
+* write a manifest file to create
+ 
+•	nginx
+---
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: exec1
+spec:
+  containers:
+    - name: nginx
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+
+•	nginx and alpine with sleep 1d
+
+---
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: exec2
+spec:
+  containers:
+    - name: nginx
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+    - name: alpine
+      image: alpine:3.18
+      args: 
+        - sleep
+        - 1d
+      
+    
+
+•	nginx ,alpine with sleep 1d and alpine with 10s
+
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: exec3
+spec:
+  containers:
+    - name: nginx
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+    - name: alpine
+      image: alpine:3.18
+      args: 
+        - sleep
+        - 1d
+    - name: alpine
+      image: alpine:3.18
+      args: 
+        - sleep
+        - 10s
+
+•	nginx and httpd with 80 port exposed
+---
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: exec4
+spec:
+  containers:
+    - name: nginx
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+    - name: httpd
+      image: httpd:latest
+      ports:
+        - containerPort: 80
