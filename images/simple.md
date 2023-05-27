@@ -60,6 +60,8 @@ kubectl apply -f
 kubectl get <api-resource>
 kubectl describe <kind> <name> 
 kubectl get <kind> <name> -o yaml
+kubectl delete 
+
 
 #exercises
 
@@ -101,6 +103,7 @@ spec:
 
 •	nginx ,alpine with sleep 1d and alpine with 10s
 
+---
 apiVersion: v1
 kind: Pod
 metadata: 
@@ -138,3 +141,7 @@ spec:
       image: httpd:latest
       ports:
         - containerPort: 80
+
+# Managing Kubernetes Objects Using Imperative Commands
+  ![referhere](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/imperative-command/)
+
