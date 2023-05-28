@@ -156,3 +156,7 @@ spec:
  * Unknown : For some reason the state of the Pod could not be obtained. This phase typically occurs due to an error in communicating with the node where the Pod should be running.
 
 
+# container states in K8s pods
+  
+* ![referehere](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#container-states)
+* 
