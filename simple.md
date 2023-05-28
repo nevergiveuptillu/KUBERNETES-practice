@@ -154,4 +154,5 @@ spec:
  * Succeeded : All containers in the Pod have terminated in success, and will not be restarted.
  * Failed	: All containers in the Pod have terminated, and at least one container has terminated in failure. That is, the container either exited with non-zero status or was terminated by the system.
  * Unknown : For some reason the state of the Pod could not be obtained. This phase typically occurs due to an error in communicating with the node where the Pod should be running.
- 
+
+
