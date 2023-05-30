@@ -1,0 +1,24 @@
+---
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: ReplicaSetcheck
+  labels: shiva
+spec:
+  minReadySeconds: 1
+  replicas: 3
+  selector:
+    matchLabels: key
+  template:
+    metadata:
+      name: repi
+    spec:
+      - containers:
+          name: httpd
+          image: httpd:2
+          ports:
+            - containerPort: 80
+
+
+
+
