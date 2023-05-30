@@ -14,5 +14,57 @@ kubectl apply -f
 kubectl get <api-resource>
 kubectl describe <kind> <name>
 
-*
+# git clone to kubectl
 
+# httpd yaml execution :exec1
+
+   C:\Program Files (x86)\Google\Cloud SDK>git clone https://github.com/SHIVASOMANATH/KUBERNETES-practice.git
+
+   git pull
+ 
+* kubectl apply -f 
+  
+  C:\Program Files (x86)\Google\Cloud SDK\KUBERNETES-practice>kubectl apply -f exec1.yaml
+  
+  pods created
+
+ ![preview](/practice/images/3.PNG)
+
+* kubectl get pod
+
+ ![preview](/practice/images/4.PNG)
+
+* kubectl get pod -o wide
+
+ ![preview](/practice/images/5.PNG)
+
+* kubectl describe pods httpdpod
+
+  ![preview](/practice/images/6.PNG)
+
+* delete pods command : practice>kubectl delete -f exec1.yaml
+ 
+ ![preview](/practice/images/7.PNG)
+
+https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubectl
+https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubectl#install_kubectl
+https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubectl
+
+# alpine pod execution :exec2
+
+* ![preview](/practice/images/8.PNG)
+
+# nginx pod execution :exec3
+ 
+* ![preview](/practice/images/9.PNG)
+
+# nginx & alpine pod execution :exec4
+
+* ![preview](/practice/images/10.PNG)
+  ![preview](/practice/images/11.PNG)
+
+# nginx ,alpine with sleep 1d and alpine with 10s :exec5
+
+
+
+ 
