@@ -1,0 +1,19 @@
+---
+apiversion: batch/v1
+kind: Job
+metadata: 
+  name: haijob
+spec:
+  backoffLimit: 5
+  template:
+    metadata:
+      name: haipod
+    spec:
+      restartPolicy: OnFailure
+      containers: 
+        - name: alpine
+          image: alpine:latest
+          command:
+            - sleep
+            - 10s
+    

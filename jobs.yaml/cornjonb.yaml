@@ -1,0 +1,24 @@
+---
+apiversion: batch/v1
+kind: CronJob
+metadata:
+  name: somanathcronjob
+spec:
+  schedule: '* * * * *'
+  jobTemplate:
+    metadata:
+      name: livedata
+    spec:
+      backoffLimit: 2
+      template:
+        metadata:
+          name: pod1live
+        spec:
+          restartPolicy: OnFailure
+          containers:
+            - name: alpine
+              image: alpine:latest
+              command:
+                - sleep
+                - 3s
+      
