@@ -5,7 +5,7 @@ metadata:
   name: httpdpod
 spec:
   containers:
-    - name: httpd-container
+    - name: httpdcontainer
       image: httpd:2
       ports:
         - containerPort: 80
