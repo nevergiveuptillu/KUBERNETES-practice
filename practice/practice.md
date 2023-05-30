@@ -109,6 +109,29 @@ https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubect
 
 * cronjobs verification
 
+   ![preview](/practice/images/22.PNG)
+
+  ![preview](/practice/images/23.PNG)
+
+
+#### pods portforwarding execution 
+
+  alpine pod run and exec command verification
+
+* ```
+  kubectl exec alpine pwd
+  kubectl exec alpine ls
+  kubectl exec alpine -it /bin/sh
+  ```
+![preview](/practice/images/24.PNG)
+
+ httpd isntall and port-forwarding 
+
+ kubectl port-forward --address "0.0.0.0" httpd 8080:80
+
+
+
+
 
 
 
