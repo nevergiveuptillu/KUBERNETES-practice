@@ -73,7 +73,7 @@ https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubect
 
  ![preview](/practice/images/14.PNG)
 
-# nginx and httpd with 80 port exposed
+# nginx and httpd with 80 port exposed :exec6
 
  back loop off error obseved
 
@@ -85,8 +85,24 @@ https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubect
 
 # Restart policys 
 
-# allways restart yaml 
- 
- 
+# allways restart Policy  : allways restart.yaml
+
+  ![preview](/practice/images/17.PNG)
+
+# Never restart Policy  : restart never.yaml
+
+  ![preview](/practice/images/18.PNG)
+
+# on failure restart Policy : restart onfailure.yaml
+
+  ![preview](/practice/images/19.PNG)
+
+  ![preview](/practice/images/20.PNG)
+
+## jobs.yaml ---cron jobs.yaml
+
+* jobs.yaml
+
+  
 
  
