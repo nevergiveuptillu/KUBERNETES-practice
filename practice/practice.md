@@ -125,9 +125,14 @@ https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubect
   ```
 ![preview](/practice/images/24.PNG)
 
- httpd isntall and port-forwarding 
+##  httpd install and port-forwarding 
 
  kubectl port-forward --address "0.0.0.0" httpd 8080:80
+
+![preview](/practice/images/25.PNG)
+
+
+
 
 
 
