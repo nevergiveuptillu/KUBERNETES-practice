@@ -101,8 +101,15 @@ https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubect
 
 ## jobs.yaml ---cron jobs.yaml
 
-* jobs.yaml
+* jobs.yaml verification
 
+  `kubectl get jobs`
   
+  ![preview](/practice/images/21.PNG)
+
+* cronjobs verification
+
+
+
 
  
