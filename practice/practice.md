@@ -132,7 +132,7 @@ https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubect
 ![preview](/practice/images/25.PNG)
 
 
-
+### Replication controller and Replica set
 
 
 
