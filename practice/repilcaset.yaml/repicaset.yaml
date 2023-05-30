@@ -3,7 +3,8 @@ apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: ReplicaSetcheck
-  labels: shiva
+  labels:
+    key1: shiva
 spec:
   minReadySeconds: 1
   replicas: 3
