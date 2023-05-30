@@ -63,8 +63,30 @@ https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubect
 * ![preview](/practice/images/10.PNG)
   ![preview](/practice/images/11.PNG)
 
-# nginx ,alpine with sleep 1d and alpine with 10s :exec5
+# nginx ,alpine with sleep 1d and alpine with 10s :exec5 
+
+* CrashLoopBackOff error
+
+ ![preview](/practice/images/12.PNG)
+ 
+ ![preview](/practice/images/13.PNG)
+
+ ![preview](/practice/images/14.PNG)
+
+# nginx and httpd with 80 port exposed
+
+ back loop off error obseved
+
+ ![preview](/practice/images/15.PNG)
 
 
+* kubectl get pods httpd -o yaml
+ ![preview](/practice/images/16.PNG)
+
+# Restart policys 
+
+# allways restart yaml 
+ 
+ 
 
  
