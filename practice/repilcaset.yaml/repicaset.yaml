@@ -4,21 +4,23 @@ kind: ReplicaSet
 metadata:
   name: ReplicaSetcheck
   labels:
-    key1: shiva
 spec:
   minReadySeconds: 1
   replicas: 3
   selector:
-    matchLabels: key
+    matchLabels:
+      app: nginx
   template:
     metadata:
       name: replicapod
+      labels: 
+        app: nginx
     spec:
-      - containers:
-          name: httpd
-          image: httpd:2
-          ports:
-            - containerPort: 80
+      containers:
+         - name: nginx 
+           image: nginx:1
+           ports:
+             - containerPort: 80
 
 
 
