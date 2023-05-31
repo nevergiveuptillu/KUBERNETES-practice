@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: replicaSet-2
+  name:
   labels:
 spec:
   minReadySeconds: 1
