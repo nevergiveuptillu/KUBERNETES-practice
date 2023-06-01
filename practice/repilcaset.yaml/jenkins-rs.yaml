@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: jenkins
+  name: jenkins-end
 spec:
   minReadySeconds: 2
   replicas: 5
