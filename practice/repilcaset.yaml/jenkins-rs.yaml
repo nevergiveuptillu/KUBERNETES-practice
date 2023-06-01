@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: jenkins-rsadd
+  name: jenkins
 spec:
   minReadySeconds: 2
   replicas: 5
