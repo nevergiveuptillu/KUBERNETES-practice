@@ -8,7 +8,7 @@ spec:
   replicas: 5
   selector:
     matchLabels:
-      app: jenkins
+      app:
   template:
     metadata:
       name: jenikns
