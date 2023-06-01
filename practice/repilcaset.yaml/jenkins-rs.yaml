@@ -2,18 +2,18 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: jenkins-rs
+  name: jenkins-rsadd
 spec:
   minReadySeconds: 2
   replicas: 5
   selector:
     matchLabels:
-      app: jenkins/jenkins
+      app: jenkins
   template:
     metadata:
-      name: jenkins/jenkins
+      name: jenikns
       labels:
-        app: jenkins/jenkins
+        app: jenikns
     spec:
       containers:
         - name: jenkins
