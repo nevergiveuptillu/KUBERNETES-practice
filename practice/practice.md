@@ -135,8 +135,15 @@ https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubect
 ### Replication controller and Replica set
 
 
+replica set
 
+![preview](/practice/images/26.PNG)
 
+![preview](/practice/images/27.PNG)
+
+* kubectl get rs
+* kubectl describe rs name
+* kubectl scale --replicas=5 rs/name
 
 
 
