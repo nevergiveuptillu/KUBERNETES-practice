@@ -11,9 +11,9 @@ spec:
       app: jenkins
   template:
     metadata:
-      name: jenikns-alpine
+      name: jenikns
       labels:
-        app: jenikns-alpine
+        app: jenikns
     spec:
       containers:
         - name: jenkins

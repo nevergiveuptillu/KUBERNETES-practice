@@ -141,6 +141,23 @@ replica set
 
 ![preview](/practice/images/27.PNG)
 
+![preview](/practice/images/28.PNG)
+
+![preview](/practice/images/29.PNG)
+
+![preview](/practice/images/30.PNG)
+
+  38 kubectl get po
+  27 kubectl get po -w
+  40 kubectl get rs
+  33 kubectl describe pod replica-p6swc
+  39 kubectl scale --replicas=5 rs/replica
+  45 kubectl describe rs/replica
+  46 ls
+  48 kubectl delete pod replica-6bk7k
+  60 kubectl describe rs/replica
+  61 kubectl get rs
+
 * kubectl get rs
 * kubectl describe rs name
 * kubectl scale --replicas=5 rs/name
@@ -156,7 +173,7 @@ replica set
 }
 Labels allow for efficient queries and watches and are ideal for use in UIs and CLIs. Non-identifying information should be recorded using annotations.
 
-Motivation
+
 
 
 
