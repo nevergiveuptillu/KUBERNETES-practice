@@ -174,7 +174,24 @@ replica set
 Labels allow for efficient queries and watches and are ideal for use in UIs and CLIs. Non-identifying information should be recorded using annotations.
 
 
+![preview](/practice/images/31.PNG)
 
 
+ kubectl get po --show-labels
+ kubectl run n1 --image=nginx --labels "app=nginx,component=web" imparative way
 
- 
+ Selectors:
+
+ ![preview](/practice/images/32.PNG)
+ ![preview](/practice/images/33.PNG)
+
+
+ kubectl get po --selector "app=nginx" --show-labels
+  kubectl get po --selector "app in (nginx,web)" --show-labels
+  kubectl label po labeldemo app=jenkins --overwrite
+
+  
+ ![preview](/practice/images/34.PNG)
+
+  kubectl delete rs jenkins-rs   need to carefull delete lables
+
