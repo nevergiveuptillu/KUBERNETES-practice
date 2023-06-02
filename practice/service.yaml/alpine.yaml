@@ -1,0 +1,17 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: alpinepod
+  labels: 
+    name: alpine
+    version: "3.18"
+spec:
+  containers:
+    - name: alpine
+      image: alpine:3.18
+      commands:
+        - sleep
+        - 1d
+      
+

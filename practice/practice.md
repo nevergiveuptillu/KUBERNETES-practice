@@ -134,6 +134,7 @@ https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubect
 
 ### Replication controller and Replica set
 
+ kubectl get replicationcontroller
 
 replica set
 
@@ -194,4 +195,9 @@ Labels allow for efficient queries and watches and are ideal for use in UIs and 
  ![preview](/practice/images/34.PNG)
 
   kubectl delete rs jenkins-rs   need to carefull delete lables
+
+# Load balancer
+
+# services
+
 

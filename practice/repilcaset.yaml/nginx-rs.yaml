@@ -3,7 +3,6 @@ apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: replica
-  labels:
 spec:
   minReadySeconds: 1
   replicas: 3
