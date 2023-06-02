@@ -207,7 +207,7 @@ A load balancer is used to distribute the load that servers or virtual machines 
 internal comunications:
 
 commands:
-
+```
 kubectl apply -f .\service.yaml
 kubectl apply -f .\alpine.yaml
 kubectl get svc -o wide
@@ -216,6 +216,8 @@ kubectl get po --show-labels
 kubectl get svc -o wide
 kubectl exec -it alpinepod -- /bin/sh
 kubectl exec nginx-rs-8mmxt -- printenv
+```
+
   ![preview](/practice/images/35.PNG)
   ![preview](/practice/images/36.PNG)
   ![preview](/practice/images/37.PNG)
@@ -225,11 +227,13 @@ kubectl exec nginx-rs-8mmxt -- printenv
  ![preview](/practice/images/38.PNG)
  ![preview](/practice/images/39.PNG)
 
+```
    6 curl https:// 10.71.128.140
    7 apk add curl
    8 curl https:// 10.71.128.140
    9 curl http://nginx-svc
   10 nslookup nginx-svc
+```
 / # nslookup 10.71.128.140
 Server:         10.71.128.10
 Address:        10.71.128.10:53
