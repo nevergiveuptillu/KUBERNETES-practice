@@ -198,9 +198,13 @@ Labels allow for efficient queries and watches and are ideal for use in UIs and 
 
 # Load balancer
 
+A load balancer is used to distribute the load that servers or virtual machines have to process in the most efficient manner possible. In this way, overall performance can be improved. Normally, a load balancer is placed upstream of the servers to prevent individual servers being overloaded. This also ensures optimal use of the available resources. Even when a server fails, the load balancer guarantees an up-and-running system by redirecting requests in a targeted manner
 
+![preview](/practice/images/40.PNG)
 
 # services
+
+internal comunications:
 
 commands:
 
