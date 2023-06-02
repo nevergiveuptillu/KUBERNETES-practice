@@ -9,7 +9,7 @@ spec:
   containers:
     - name: alpine
       image: alpine:3.18
-      commands:
+      command:
         - sleep
         - 1d
       
