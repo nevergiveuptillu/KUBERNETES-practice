@@ -201,9 +201,62 @@ Labels allow for efficient queries and watches and are ideal for use in UIs and 
 
 
 # services
-  
-  
 
+commands:
 
+kubectl apply -f .\service.yaml
+kubectl apply -f .\alpine.yaml
+kubectl get svc -o wide
+kubectl get rs --show-labels
+kubectl get po --show-labels
+kubectl get svc -o wide
+kubectl exec -it alpinepod -- /bin/sh
+kubectl exec nginx-rs-8mmxt -- printenv
+  ![preview](/practice/images/35.PNG)
+  ![preview](/practice/images/36.PNG)
+  ![preview](/practice/images/37.PNG)
 
+* nslookup
 
+ ![preview](/practice/images/38.PNG)
+ ![preview](/practice/images/39.PNG)
+
+   6 curl https:// 10.71.128.140
+   7 apk add curl
+   8 curl https:// 10.71.128.140
+   9 curl http://nginx-svc
+  10 nslookup nginx-svc
+/ # nslookup 10.71.128.140
+Server:         10.71.128.10
+Address:        10.71.128.10:53
+
+Non-authoritative answer:
+140.128.71.10.in-addr.arpa      name = nginx-svc.default.svc.cluster.local
+
+/ # cat /etc/resolv.conf
+search default.svc.cluster.local svc.cluster.local cluster.local asia-south2-a.c.omega-episode-388205.internal c.omega-episode-388205.internal google.internal
+nameserver 10.71.128.10
+options ndots:5
+
+/ # printenv
+KUBERNETES_SERVICE_PORT=443
+KUBERNETES_PORT=tcp://10.71.128.1:443
+NGINX_SVC_SERVICE_HOST=10.71.128.140
+NGINX_SVC_SERVICE_PORT_NGINX_SVC=80
+HOSTNAME=alpinepod
+SHLVL=1
+HOME=/root
+NGINX_SVC_SERVICE_PORT=80
+NGINX_SVC_PORT=tcp://10.71.128.140:80
+NGINX_SVC_PORT_80_TCP_ADDR=10.71.128.140
+NGINX_SVC_PORT_80_TCP_PORT=80
+NGINX_SVC_PORT_80_TCP_PROTO=tcp
+TERM=xterm
+KUBERNETES_PORT_443_TCP_ADDR=10.71.128.1
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+KUBERNETES_PORT_443_TCP_PORT=443
+KUBERNETES_PORT_443_TCP_PROTO=tcp
+NGINX_SVC_PORT_80_TCP=tcp://10.71.128.140:80
+KUBERNETES_SERVICE_PORT_HTTPS=443
+KUBERNETES_PORT_443_TCP=tcp://10.71.128.1:443
+KUBERNETES_SERVICE_HOST=10.71.128.1
