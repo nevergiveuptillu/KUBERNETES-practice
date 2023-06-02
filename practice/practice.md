@@ -242,6 +242,7 @@ search default.svc.cluster.local svc.cluster.local cluster.local asia-south2-a.c
 nameserver 10.71.128.10
 options ndots:5
 
+```
 / # printenv
 KUBERNETES_SERVICE_PORT=443
 KUBERNETES_PORT=tcp://10.71.128.1:443
@@ -264,7 +265,7 @@ NGINX_SVC_PORT_80_TCP=tcp://10.71.128.140:80
 KUBERNETES_SERVICE_PORT_HTTPS=443
 KUBERNETES_PORT_443_TCP=tcp://10.71.128.1:443
 KUBERNETES_SERVICE_HOST=10.71.128.1
-
+```
 
 * external comunication:
 
