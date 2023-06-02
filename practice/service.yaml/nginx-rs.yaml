@@ -2,10 +2,11 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: nginx
+  name: nginx-rs
   labels:
     app: nginx
-    apiVersion: "1.23"
+    layer: web
+    version: "1.23"
 spec:
   minReadySeconds: 5
   replicas: 2
@@ -15,7 +16,9 @@ spec:
   template:
     metadata:
       name: nginx
-      labels: nginx
+      labels:
+        app: nginx
+        version: "1.23"
     spec:
       containers:
         - name: nginx
