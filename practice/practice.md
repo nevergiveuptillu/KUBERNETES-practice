@@ -264,3 +264,15 @@ NGINX_SVC_PORT_80_TCP=tcp://10.71.128.140:80
 KUBERNETES_SERVICE_PORT_HTTPS=443
 KUBERNETES_PORT_443_TCP=tcp://10.71.128.1:443
 KUBERNETES_SERVICE_HOST=10.71.128.1
+
+
+* external comunication:
+
+ ![preview](/practice/images/41.PNG)
+
+ ![preview](/practice/images/42.PNG)
+ 
+ ![preview](/practice/images/43.PNG)
+
+
+
