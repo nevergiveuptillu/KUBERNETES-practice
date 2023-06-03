@@ -57,7 +57,7 @@ spec:
             failureThreshold: 3
             initialDelaySeconds: 1
             periodSeconds: 10
-            successThreshold: 3
+            successThreshold: 1
             timeoutSeconds: 20
             exec:
               command:
@@ -67,7 +67,7 @@ spec:
             failureThreshold: 3
             initialDelaySeconds: 1
             periodSeconds: 10
-            successThreshold: 3
+            successThreshold: 1
             timeoutSeconds: 1
             httpGet:
               path: /
