@@ -10,6 +10,11 @@ spec:
       ports:
         - containerPort: 80
   initContainers:
+    - name: delay
+      image: alpine
+      command: 
+        - sleep
+        - 15s
     - name: init-myservice
       image: busybox:1.28
       command: 
