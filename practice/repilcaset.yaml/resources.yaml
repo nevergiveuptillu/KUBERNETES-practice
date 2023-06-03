@@ -5,7 +5,7 @@ metadata:
   name: replica
 spec:
   minReadySeconds: 1
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: nginx
