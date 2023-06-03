@@ -311,3 +311,9 @@ check success condition
 
 ![preview](/practice/images/47.PNG)
 
+![preview](/practice/images/48.PNG)
+
+![preview](/practice/images/49.PNG)
+
+
+
