@@ -277,7 +277,7 @@ KUBERNETES_PORT_443_TCP=tcp://10.71.128.1:443
 KUBERNETES_SERVICE_HOST=10.71.128.1
 ```
 
-* external comunication:
+* external comunication: Load Balancer
 
  ![preview](/practice/images/41.PNG)
 
@@ -285,5 +285,14 @@ KUBERNETES_SERVICE_HOST=10.71.128.1
  
  ![preview](/practice/images/43.PNG)
 
+### Health checks
+
+•	liveness probe: if this check fails kuberenetes will restart the container.
+•	readiness probe: if this check fails the pod will be removed from service (pod will not get requests from service)
+•	startup probe: This checks for startup and until startup is ok, the other checks will be paused.
 
 
+
+Livecheck it fails it will restart the container
+readieness check fails it will stop the application called from service
+r-ness serving the number request
