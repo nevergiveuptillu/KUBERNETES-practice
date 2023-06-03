@@ -324,3 +324,8 @@ readiness check condition
 
 write health checks /write labels seletors/ write resources /write replicas
 
+
+added limts and requests :refer resources.yaml
+
+![preview](/practice/images/50.PNG)
+
