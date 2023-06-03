@@ -308,3 +308,7 @@ when check fails
 check success condition
 
 ![preview](/practice/images/46.PNG)
+
+![preview](/practice/images/47.PNG)
+
+
