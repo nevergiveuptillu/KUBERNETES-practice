@@ -299,8 +299,12 @@ r-ness serving the number request
 
 * checking live ness and redieness prob
 
+when check fails
 
  ![preview](/practice/images/44.PNG)
 
  ![preview](/practice/images/45.PNG)
 
+check success condition
+
+![preview](/practice/images/46.PNG)
