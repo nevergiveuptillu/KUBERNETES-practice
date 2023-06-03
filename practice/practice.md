@@ -311,4 +311,3 @@ check success condition
 
 ![preview](/practice/images/47.PNG)
 
-

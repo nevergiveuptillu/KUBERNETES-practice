@@ -54,13 +54,14 @@ spec:
           ports:
             - containerPort: 80
           readinessProbe:
-            failureThreshold: 3
+            failureThreshold: 1
             initialDelaySeconds: 1
             periodSeconds: 10
             successThreshold: 1
             timeoutSeconds: 1
-            httpGet:
-              path: /
-              port: 80
+            exec:
+              command:
+                - sleep
+                - 1MM
       
       
