@@ -296,3 +296,11 @@ KUBERNETES_SERVICE_HOST=10.71.128.1
 Livecheck it fails it will restart the container
 readieness check fails it will stop the application called from service
 r-ness serving the number request
+
+* checking live ness and redieness prob
+
+
+ ![preview](/practice/images/44.PNG)
+
+ ![preview](/practice/images/45.PNG)
+
