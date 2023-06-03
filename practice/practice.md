@@ -329,3 +329,11 @@ added limts and requests :refer resources.yaml
 
 ![preview](/practice/images/50.PNG)
 
+### container types
+
+we have 3 
+  * containers:
+  * init container: 
+  * ephemeral containers:
+
+    * init container: 
