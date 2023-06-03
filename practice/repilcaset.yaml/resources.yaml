@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: replica
+  name: resources
 spec:
   minReadySeconds: 1
   replicas: 3
