@@ -337,3 +337,9 @@ we have 3
   * ephemeral containers:
 
     * init container: 
+
+![preview](/practice/images/51.PNG)
+
+ * ephemeral containers:
+
+  
