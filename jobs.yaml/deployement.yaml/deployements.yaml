@@ -23,7 +23,7 @@ spec:
         ver: "1.23"
     spec:
       containers:
-        - name: nginx
+        - name: httpd
           image: httpd
           ports:
             - containerPort: 80
