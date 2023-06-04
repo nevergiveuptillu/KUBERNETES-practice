@@ -342,4 +342,32 @@ we have 3
 
  * ephemeral containers:
 
+
+ # Deployements 
+
+ `commands`:
+
+```
+kubectl get svc
+kubectl get po
+kubectl get deployement
+kubectl api-resources
+kubectl get deploy
+kubectl get deploy -o wide
+kubectl describe deploy deploy-check
+kubectl describe deploy deploy-check
+kubectl get rs
+kubectl rollout history deployment/deploy-check
+kubectl rollout status deployment/deploy-check
+
+```
+![preview](/practice/images/52.PNG)
+
+![preview](/practice/images/53.PNG)
+
+
+
+rollout :
+
+
   
