@@ -367,12 +367,15 @@ kubectl rollout status deployment/deploy-check
 
 change the version of image 
 
+kubectl get deployement.apps -w
+
+
 ![preview](/practice/images/54.PNG)
 
 ![preview](/practice/images/55.PNG)
 
 rollout :
 
-
+![preview](/practice/images/56.PNG)
 
   
