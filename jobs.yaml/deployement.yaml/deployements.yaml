@@ -23,8 +23,8 @@ spec:
         ver: "1.23"
     spec:
       containers:
-        - name: httpd
-          image: httpd
+        - name: nginx
+          image: nginx
           ports:
             - containerPort: 80
           livenessProbe:

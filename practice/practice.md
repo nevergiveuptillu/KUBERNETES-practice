@@ -365,9 +365,14 @@ kubectl rollout status deployment/deploy-check
 
 ![preview](/practice/images/53.PNG)
 
+change the version of image 
 
+![preview](/practice/images/54.PNG)
+
+![preview](/practice/images/55.PNG)
 
 rollout :
+
 
 
   
