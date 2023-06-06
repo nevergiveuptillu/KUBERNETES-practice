@@ -16,7 +16,7 @@ spec:
     metadata: 
       name: fluentd
       labels:
-      app: fluentd
+        app: fluentd
     spec:
       containers:
         - name: fluentd
