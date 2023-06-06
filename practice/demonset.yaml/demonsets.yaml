@@ -1,0 +1,23 @@
+---
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: daemonSet
+  annotations:
+    kubernetes.io/change-cause: "added fluentd debian"
+  labels:
+    app: fluentd
+spec:
+  minReadySeconds: 5
+  selector:
+    matchLabels:
+      app: fluentd
+  template:
+    metadata: 
+      name: daemonSet
+      labels:
+      app: fluentd
+    spec:
+      containers:
+        - name: fluentd
+          image: fluentd

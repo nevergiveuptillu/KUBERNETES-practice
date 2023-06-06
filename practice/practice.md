@@ -386,3 +386,10 @@ rollout undo :
 kubectl rollout undo deployments/deploy-check
 
 kubectl rollout undo deployments/deploy-check --to-revision=2
+
+need to write anotaions in metadata for the change cause roolout history 
+![preview](/practice/images/58.PNG)
+
+Demonset
+--------
+•	DaemonSet is a controller which creates pod on every/selected nodes in k8s cluster
