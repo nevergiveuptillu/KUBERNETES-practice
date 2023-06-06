@@ -22,4 +22,3 @@ spec:
         - name: fluentd
           image: fluentd:latest
           port:
-            - containerPort: 24224
