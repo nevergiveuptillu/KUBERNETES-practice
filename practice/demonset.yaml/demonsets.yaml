@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
-  name: daemonSet
+  name: fluentd
   annotations:
     kubernetes.io/change-cause: "added fluentd debian"
   labels:
@@ -14,10 +14,12 @@ spec:
       app: fluentd
   template:
     metadata: 
-      name: daemonSet
+      name: fluentd
       labels:
       app: fluentd
     spec:
       containers:
         - name: fluentd
           image: fluentd
+          port:
+            - containerPort: 24224
