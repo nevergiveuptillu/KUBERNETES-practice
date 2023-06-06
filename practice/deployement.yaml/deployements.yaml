@@ -13,8 +13,8 @@ spec:
       app: nginx
   strategy: 
     rollingUpdate:
-      maxSurge: 25%
-      maxUnavailable: 25%
+      maxSurge: 50%
+      maxUnavailable: 50%
   template:
     metadata:
       name: nginx
@@ -23,8 +23,8 @@ spec:
         ver: "1.23"
     spec:
       containers:
-        - name: httpd
-          image: httpd
+        - name: phpmyadmin
+          image: phpmyadmin
           ports:
             - containerPort: 80
           livenessProbe:

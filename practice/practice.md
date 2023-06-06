@@ -379,3 +379,6 @@ rollout :
 ![preview](/practice/images/56.PNG)
 
   
+rollout undo :
+
+![preview](/practice/images/57.PNG)
