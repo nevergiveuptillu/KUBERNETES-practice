@@ -382,3 +382,7 @@ rollout :
 rollout undo :
 
 ![preview](/practice/images/57.PNG)
+
+kubectl rollout undo deployments/deploy-check
+
+kubectl rollout undo deployments/deploy-check --to-revision=2
