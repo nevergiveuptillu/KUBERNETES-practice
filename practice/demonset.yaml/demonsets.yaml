@@ -4,7 +4,7 @@ kind: DaemonSet
 metadata:
   name: fluentd
   annotations:
-    kubernetes.io/change-cause: "added fluentd debian"
+    kubernetes.io/change-cause: "update to latest"
   labels:
     app: fluentd
 spec:
@@ -16,10 +16,10 @@ spec:
     metadata: 
       name: fluentd
       labels:
-      app: fluentd
+        app: fluentd
     spec:
       containers:
         - name: fluentd
-          image: fluentd
+          image: fluentd:latest
           port:
             - containerPort: 24224
