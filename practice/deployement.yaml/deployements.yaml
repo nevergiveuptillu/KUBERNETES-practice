@@ -4,8 +4,7 @@ kind: Deployment
 metadata: 
   name: deploy-check
   annotations:
-    kubernetes.io/change-cause
-
+    kubernetes.io/change-cause: "updated to phy myadmin"
   labels:
     app: nginx
 spec:
