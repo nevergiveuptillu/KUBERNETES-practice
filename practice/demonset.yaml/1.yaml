@@ -5,8 +5,6 @@ metadata:
   name: fluentd
   annotations:
     kubernetes.io/change-cause: "update to latest"
-  labels:
-    app: fluentd
 spec:
   minReadySeconds: 5
   selector:
@@ -21,5 +19,4 @@ spec:
       containers:
         - name: fluentd
           image: fluentd:latest
-          port:
-            - containerPort: 24224
+         
