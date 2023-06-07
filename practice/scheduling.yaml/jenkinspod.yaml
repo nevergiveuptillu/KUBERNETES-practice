@@ -5,7 +5,7 @@ metadata:
   name: nodeselector
   labels:
     app: nginx
-  purpose: nodeselector
+    purpose: nodeselector
 spec:
   containers:
     - name: jenkins
