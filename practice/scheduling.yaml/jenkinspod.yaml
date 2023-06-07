@@ -2,14 +2,14 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nodeselector
+  name: nodeselector1
   labels:
     app: nginx
-    purpose: nodeselector
+    purpose: nodeselector1
 spec:
   nodeName: "gk3-practice21-default-pool-41dfd006-4b36"
   containers:
-    - name: jenkins
+    - name: jenkins1
       image: jenkins/jenkins:jdk11
       ports:
         - containerPort: 8080
