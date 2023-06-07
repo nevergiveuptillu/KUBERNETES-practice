@@ -437,3 +437,5 @@ tolerations:
 ### Headless Service :
 
 virtual cluser :namespace
+
+cluster ip is that is given to be and svc in kubernetes
