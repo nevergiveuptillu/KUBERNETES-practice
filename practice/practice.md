@@ -393,3 +393,8 @@ need to write anotaions in metadata for the change cause roolout history
 Demonset
 --------
 •	DaemonSet is a controller which creates pod on every/selected nodes in k8s cluster
+
+![preview](/practice/images/60.PNG)
+
+
+![preview](/practice/images/61.PNG)
