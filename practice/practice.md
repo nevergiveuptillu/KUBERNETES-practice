@@ -398,3 +398,13 @@ Demonset
 
 
 ![preview](/practice/images/61.PNG)
+
+
+
+### scheduling pods
+
+* Node selector
+
+
+![preview](/practice/images/62.PNG)
+
