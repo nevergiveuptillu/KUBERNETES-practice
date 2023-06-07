@@ -9,7 +9,7 @@ metadata:
     version: "1.23"
 spec:
   minReadySeconds: 5
-  replicas: 2
+  replicas: 5
   selector:
     matchLabels:
       app: nginx
