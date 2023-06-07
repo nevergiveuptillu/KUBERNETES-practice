@@ -7,6 +7,7 @@ metadata:
     app: nginx
     purpose: nodeselector
 spec:
+  nodeName: "gk3-practice21-default-pool-41dfd006-4b36"
   containers:
     - name: jenkins
       image: jenkins/jenkins:jdk11
