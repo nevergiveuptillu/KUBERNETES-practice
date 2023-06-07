@@ -405,6 +405,35 @@ Demonset
 
 * Node selector
 
+** node name 
 
 ![preview](/practice/images/62.PNG)
 
+** node selector purpose
+
+* Affinity/Anti Affinity Based labels of node //pod
+
+
+node afinity : with matches the nodes 1... mandatory 2... put to have rool
+required: manditory case
+preffred: put have case
+
+pod afinity:
+ label is matches pod scheduled
+
+pod anti afinity: 
+
+ label is matches pod scheduled to another node 
+
+### Taints and tollerations
+ 
+based on taint nodes and pods scheduled
+
+tolerations:
+- key: "key1"
+  operator: "Exists"
+  effect: "NoSchedule"
+
+### Headless Service :
+
+virtual cluser :namespace
