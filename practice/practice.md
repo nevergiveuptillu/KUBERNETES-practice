@@ -439,3 +439,24 @@ tolerations:
 virtual cluser :namespace
 
 cluster ip is that is given to be and svc in kubernetes
+
+![preview](/practice/images/63.PNG)
+
+it has take pods ip which are in the nodes taken as reference state less
+
+
+### Storage solutions K8s
+
+   mostly used storage type 1. Volumes 2.Persistant volumes i.. Storage classes ii..Persistant volume claims
+ 
+ * Volumes: life time of pod ...mounted containers
+    the types
+    * storage on cloud
+       * ebs
+       * azure disk
+       * efs
+       * azure file
+       * gcs 
+    * empty dir
+    * Hostpath
+  
