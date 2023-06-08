@@ -4,7 +4,7 @@
    1. Write a Pod Spec for Spring Pet Clinic and 
    nopCommerce Applications
 
-     `* 1. Pod Spec for Spring Pet Clinic`
+* 1. Pod Spec for Spring Pet Clinic`
 
      ``` yaml
       apiVersion: v1
@@ -18,14 +18,13 @@
           - name: spc
             image: shivasomanath/spc:1.0
             ports:
-             - containerPort: 8080  
-      
-      ```     
-     ![preview](/general/k8s%20tasks/tasksresults/1.PNG)
+             - containerPort: 8080 
 
-     ![preview](/general/k8s%20tasks/tasksresults/2.PNG)
+  ![preview](/general/k8s%20tasks/tasksresults/1.PNG)
 
-      `* 2. Pod spec for nop commerce`
+  ![preview](/general/k8s%20tasks/tasksresults/2.PNG) 
+
+  * 2. Pod spec for nop commerce
 
     
 
