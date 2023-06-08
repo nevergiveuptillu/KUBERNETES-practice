@@ -1,0 +1,13 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-spc
+  labels:
+    app: spc
+spec:
+  containers:
+    - name: spc
+      image: shivasomanath/spc:1.0
+      ports:
+       - containerPort: 8080        
