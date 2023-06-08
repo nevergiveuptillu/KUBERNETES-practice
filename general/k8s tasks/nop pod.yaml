@@ -8,6 +8,6 @@ metadata:
 spec:
   containers:
     - name: nop-commerce
-      image: 
+      image: shivasomanath/nop:1.0
       ports:
-       - containerPort: 8080        
+       - containerPort: 5000        

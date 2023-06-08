@@ -1,24 +1,26 @@
 
 ### Kubernetes Activities 
-  ## Day 1.  26-04-2023
-   1. Write a Pod Spec for Spring Pet Clinic and 
-   nopCommerce Applications
+  
+## Day 1.  26-04-2023
+
+     1. Write a Pod Spec for Spring Pet Clinic and nopCommerce Applications
 
 * 1. Pod Spec for Spring Pet Clinic`
 
-     ``` yaml
-      apiVersion: v1
-      kind: Pod
-      metadata:
-        name: pod-spc
-        labels:
-          app: spc
-      spec:
-        containers:
-          - name: spc
-            image: shivasomanath/spc:1.0
-            ports:
-             - containerPort: 8080 
+  ``` yaml
+  apiVersion: v1
+  kind: Pod
+  metadata:
+    name: pod-spc
+    labels:
+      app: spc
+  spec:
+    containers:
+      - name: spc
+        image: shivasomanath/spc:1.0
+        ports:
+         - containerPort: 8080 
+  ```
 
   ![preview](/general/k8s%20tasks/tasksresults/1.PNG)
 
@@ -26,16 +28,57 @@
 
   * 2. Pod spec for nop commerce
 
+  ``` yaml
+  apiVersion: v1
+  kind: Pod
+  metadata:
+    name: pod-nop
+    labels:
+      app: nop-commerce
+  spec:
+    containers:
+      - name: nop-commerce
+        image: shivasomanath/nop:1.0
+        ports:
+         - containerPort: 5000        
+  ```
+   ![preview](/general/k8s%20tasks/tasksresults/3.PNG)
+    
+   ![preview](/general/k8s%20tasks/tasksresults/4.PNG)
     
 
 
-   2. Execute the kubectl commands: kubectl get pods 
-   and describe pods
+       2. Execute the kubectl commands: kubectl get pods and describe pods
+  
+
+  ```
+  kubectl get pods
+  kubectl get nodes
+  kubectl describe pod podname
+  kubectl get po -o wide
+  kubectl get po -w
+
+  ```
+
+ ![preview](/general/k8s%20tasks/tasksresults/3.PNG)
+    
+ ![preview](/general/k8s%20tasks/tasksresults/4.PNG)
+    
+ ![preview](/general/k8s%20tasks/tasksresults/1.PNG)
+
+ ![preview](/general/k8s%20tasks/tasksresults/2.PNG) 
+
 
   ## Day 2. 27-04-2023
-   1. Explain Kubernetes architecture
+
+
+   1.Explain Kubernetes architecture
+
    2.Setup k8s on single node using minikube and kind 
+   
    3.Run the Spring Pet Clinic by manifest
+
+
    Day 3. 28-04-2023
    1. K8s Cluster Installation
    a. Kubeadm
