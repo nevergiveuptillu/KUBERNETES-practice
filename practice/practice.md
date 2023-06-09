@@ -480,3 +480,31 @@ the volume can be mounted as read-write by many nodes.
 ReadWriteOncePod
 FEATURE STATE: Kubernetes v1.27 [beta]
 the volume can be mounted as read-write by a single Pod. Use ReadWriteOncePod access mode if you want to ensure that only one pod across whole cluster can read that PVC or write to it. This is only supported for CSI volumes and Kubernetes version 1.22+.
+
+
+
+```
+kubectl get pvc
+kubectl get pv
+kubectl get sc
+```
+![preview](/practice/images/64.PNG)
+
+![preview](/practice/images/65.PNG)
+
+![preview](/practice/images/66.PNG)
+
+![preview](/practice/images/67.PNG)
+
+![preview](/practice/images/68.PNG)
+
+delete and check the pod
+
+![preview](/practice/images/69.PNG)
+
+![preview](/practice/images/70.PNG)
+
+![preview](/practice/images/71.PNG)
+
+![preview](/practice/images/72.PNG)
+
