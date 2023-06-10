@@ -1,0 +1,10 @@
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mysql-sec
+data:
+  MYSQL_ROOT_PASSWORD: c29tYW5hdGgNCg==
+  MYSQL_DATABASE: c2FpcHJpeWENCg==
+  MYSQL_USER: c2hpdmENCg==
+  MYSQL_PASSWORD: Ym9heg0K

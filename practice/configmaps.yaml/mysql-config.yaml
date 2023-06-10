@@ -1,0 +1,10 @@
+---
+apiVersion: v1
+kind: ConfigMap 
+metadata:
+  name: mysql-config
+data: 
+  MYSQL_ROOT_PASSWORD: somanath
+  MYSQL_DATABASE: nop
+  MYSQL_USER: shiva
+  MYSQL_PASSWORD: somanathm

@@ -482,7 +482,6 @@ FEATURE STATE: Kubernetes v1.27 [beta]
 the volume can be mounted as read-write by a single Pod. Use ReadWriteOncePod access mode if you want to ensure that only one pod across whole cluster can read that PVC or write to it. This is only supported for CSI volumes and Kubernetes version 1.22+.
 
 
-
 ```
 kubectl get pvc
 kubectl get pv
@@ -508,3 +507,58 @@ delete and check the pod
 
 ![preview](/practice/images/72.PNG)
 
+## Name spaces ...
+
+kubectl create ns somanath
+
+kubectl get ns somanath
+
+![preview](/practice/images/73.PNG)
+
+
+
+### configmaps
+
+kubectl get cm 
+
+![preview](/practice/images/74.PNG)
+
+kubectl exec alpine-config-env -- printenv
+
+![preview](/practice/images/75.PNG)
+
+* change the configmaps adding key 
+
+env ...key /key
+enfrom... all the keys at a time
+
+cross check the pod  print env 
+
+environmental variables created when the pod is created
+
+create mysql pod with configmaps
+and config maps
+
+kubectl get cm 
+kubectl describe cm cmname
+
+![preview](/practice/images/76.PNG)
+
+using volume mounts containers
+ configmaps apply
+
+![preview](/practice/images/77.PNG)
+
+![preview](/practice/images/78.PNG)
+
+### secrets to deal with confidential data k8s has secrets
+  
+  encoding and decodding
+
+***  Base64 ,,,,vaults
+
+![preview](/practice/images/79.PNG)
+
+kubectl describe secret mysql-sec
+
+ kubectl exec -it mysql -- mysql -u shiva -p
