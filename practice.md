@@ -562,3 +562,99 @@ using volume mounts containers
 kubectl describe secret mysql-sec
 
  kubectl exec -it mysql -- mysql -u shiva -p
+
+ ![preview](/practice/images/80.PNG)
+
+  ![preview](/practice/images/81.PNG)
+
+
+
+  #### creating ecr in linux
+
+  *  create ec2 machine  
+  *  login ssh to ec2 machine
+  *  install docker & check docker version
+  ```
+    1. download the script
+   
+      $ curl -fsSL https://get.docker.com -o install-docker.sh
+   
+    2. verify the script's content
+   
+      $ cat install-docker.sh
+   
+    3. run the script with --dry-run to verify the steps it executes
+   
+      $ sh install-docker.sh --dry-run
+   
+    4. run the script either as root, or using sudo to perform the installation.
+   
+      $ sudo sh install-docker.sh
+    5. sudo usermod -aG docker ubuntu
+
+  ```
+
+  *  install aws cli
+     
+     ``` 
+     curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+     ls
+     sudo apt install unzip
+     unzip awscliv2.zip
+     sudo ./aws/install
+     aws --version
+     ```
+   * create docker file and image run container and check status
+     ```
+     sudo service docker start
+     vi Dockerfile
+
+```
+FROM tomcat:8-jdk8 
+LABEL author="somanath" project="mysoul" organization="sai priya"
+ARG DOWNLOAD_URL=https://referenceapplicationskhaja.s3.us-west-2.amazonaws.com/gameoflife.war 
+ARG HOME_DIR=/usr/local/tomcat/webapps
+RUN apt update 
+WORKDIR ${HOME_DIR}
+ADD ${DOWNLOAD_URL} ${HOME_DIR}/gameoflife.war
+EXPOSE 8080
+CMD ["catalina.sh","run"]
+```
+
+     docker build -t gameoflife .
+     docker images --filter reference=gameoflife
+     docker image ls
+     docker run -d -P --name gameoflife gameoflife
+     docker container ls
+     docker container ls -a
+     ```
+   * create IAM user in aws and setup security credentials
+    ```
+    Policy name set
+   
+   use the IAM creadentials and login to the liux
+    ```
+   * create ecr registry in aws use the commands
+
+   ```
+
+   Retrieve an authentication token and authenticate your Docker client to your registry.
+Use the AWS CLI:
+
+aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 985724238893.dkr.ecr.ap-south-1.amazonaws.com
+Note: if you receive an error using the AWS CLI, make sure that you have the latest version of the AWS CLI and Docker installed.
+Build your Docker image using the following command. For information on building a Docker file from scratch, see the instructions here . You can skip this step if your image has already been built:
+
+docker build -t somanath .
+After the build is completed, tag your image so you can push the image to this repository:
+
+docker tag somanath:latest 985724238893.dkr.ecr.ap-south-1.amazonaws.com/somanath:latest
+Run the following command to push this image to your newly created AWS repository:
+
+docker push 985724238893.dkr.ecr.ap-south-1.amazonaws.com/somanath:latest
+
+   ```
+
+  
+   
+

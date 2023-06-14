@@ -8,18 +8,18 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx
+      app: gameoflife
   template:
     metadata:
       name: replicapod
       labels: 
-        app: nginx
+        app: gameoflife
     spec:
       containers:
-         - name: nginx 
-           image: nginx:1.25
+         - name: gameoflife 
+           image: docker push 985724238893.dkr.ecr.ap-south-1.amazonaws.com/somanath:latest
            ports:
-             - containerPort: 80
+             - containerPort: 28000
 
 
 
