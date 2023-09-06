@@ -18,6 +18,12 @@ go language //tar file
 - source ~/.profile
 - go version
 
+
+cri -O installation steps:
+--------------------------
+- https://www.linuxtechi.com/install-crio-container-runtime-on-ubuntu/
+
+
 cri-dockered gitclone
 ---------------------
 - wget https://github.com/Mirantis/cri-dockerd/releases/download/v0.2.0/cri-dockerd-v0.2.0-linux-amd64.tar.gz
@@ -47,7 +53,8 @@ cd ~
 - sudo apt-get install -y kubelet kubeadm kubectl
 - sudo apt-mark hold kubelet kubeadm kubectl
 
-- kubeadm init --pod-network-cidr "10.244.0.0/16" --cri-socket "unix:///var/run/cri-dockerd.sock"
+- kubeadm init --pod-network-cidr "10.244.0.0/16" 
+- kubeadm init --pod-network-cidr "10.244.0.0/16" --cri-socket "unix:///var/run/crio/crio.sock"
 - exit
 - regular user
 - mkdir -p $HOME/.kube
