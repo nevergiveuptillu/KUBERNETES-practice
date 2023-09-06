@@ -47,12 +47,13 @@ cd ~
 - sudo apt-get install -y kubelet kubeadm kubectl
 - sudo apt-mark hold kubelet kubeadm kubectl
 
-- kubeadm init --pod-network-cidr "10.244.0.0/16" --cri-socket "unix:///var/run/cri-dockerd.sock
+- kubeadm init --pod-network-cidr "10.244.0.0/16" --cri-socket "unix:///var/run/cri-dockerd.sock"
 - exit
-- 
-- mkdir -p $HOME/.kube sudo cp -i /etc/kubernetes/admin.conf 
-- (id -u):$(id -g) $HOME/.kube/config
-- 
+- regular user
+- mkdir -p $HOME/.kube
+- sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+- sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
 - kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
 - 
 - Node !:::::
