@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: httpd-rs
+  labels:
+    app: httpd
+    version: "2.4.57"
+    layer: web
+spec:
+  minReadySeconds: 1
+  replicas: 2
+  selector:
+    matchLabels:
+      app: httpd
+  template:
+    metadata:
+      name: httpd
+      labels:
+        app: httpd
+    spec:
+      containers:
+      - name: httpd
+        image: httpd:2.4.57
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        readinessProbe:
+          initialDelaySeconds: 2
+          periodSeconds: 5
+          successThreshold: 1
+          failureThreshold: 2
+          timeoutSeconds: 2
+          tcpSocket:
+            port: 80
+          # exec:
+          #   command:
+          #   - sleep
+          #   - 10MM
+        livenessProbe:
+          timeoutSeconds: 1
+          failureThreshold: 2
+          successThreshold: 1
+          initialDelaySeconds: 3
+          periodSeconds: 5
+          # tcpSocket:
+          #   port: 80
+          exec:
+            command:
+            - sleep
+            - 10MM

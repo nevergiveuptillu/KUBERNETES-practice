@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  name: nop-svc
+spec:
+  ports:
+    - port: 5000
+      targetPort: 5000
+      name: nop-svc
+      protocol: TCP
+  type: LoadBalancer
+  selector:
+    app: nop

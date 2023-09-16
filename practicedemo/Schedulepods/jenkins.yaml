@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nodeselector
+  labels:
+    app: nginx
+    purpose: nodeselector
+spec:
+  nodeName: "gk3-rohit-pool-1-dd06ff67-n2nk"
+  containers:
+    - name: jenkins
+      image: jenkins/jenkins:jdk11
+      ports:
+        - containerPort: 8080

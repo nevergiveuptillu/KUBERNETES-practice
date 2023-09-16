@@ -1,0 +1,26 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: cronjobverfi
+spec:
+  schedule: " */2 * * * * "
+  jobTemplate:
+    metadata:
+      name: croncheck
+    spec:
+      template:
+        metadata:
+          name: crons
+        spec:
+          activeDeadlineSeconds: 20
+          restartPolicy: Never
+          containers:
+          - image: alpine
+            name: alpine
+            command:
+            - sleep
+            - 10s
+
+
+
+

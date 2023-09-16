@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: jobspecalpine
+spec:
+  template:
+    metadata:
+      name: jobpodalpine
+    spec:
+      containers:
+      - name: alpine
+        image: alpine
+        command:
+          - sleep
+          - 20s
+      restartPolicy: OnFailure
+      activeDeadlineSeconds: 10

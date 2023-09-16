@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginxn1
+  labels:
+    app: web
+    component: webs
+spec:
+  containers:
+  - name: nginx
+    image: nginx:1.20
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+    - containerPort: 80
+
+
+#  kubectl get pods --show-labels
+#  kubectl get pods --selector "app=nginx"

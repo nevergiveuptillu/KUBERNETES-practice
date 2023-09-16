@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: nginx-rs
+  labels:
+    app: nginx
+spec:
+  minReadySeconds: 1
+  selector:
+    matchLabels:
+      app: nginx
+  replicas: 3
+  template:
+    metadata:
+      name: nginx-pod
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - image: nginx:1.23
+        name: nginx
+        ports:
+        - containerPort: 80
+
+
+# scale the replicas kubectl scale --replicas=5 
+#  kubectl scale --replicas=5 replicaset nginx-rs

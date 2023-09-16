@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: httpd-deploy
+  # annotations:
+  #   kubernetes.io/change-cause: "update to nginx"
+  annotations:
+    kubernetes.io/change-cause: "update to phpmyadmin"
+  labels:
+    app: httpd
+    layer: web
+    version: latest
+spec:
+  minReadySeconds: 5
+  replicas: 3
+  selector:
+    matchLabels:
+      app: httpd
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 50%
+      maxUnavailable: 50%
+  template:
+    metadata:
+      name: httpd-pod
+      labels:
+        app: httpd
+    spec:
+      containers:
+      - name: httpd
+        # image: httpd
+        # image: nginx
+        image: phpmyadmin
+        ports:
+        - containerPort: 80
+          protocol: TCP
+
+#  kubectl rollout history deployment/httpd-deploy
+
+# PS D:\KUBERNETES\practicedemo\Deployment> kubectl rollout status deployment/httpd-deploy
+# deployment "httpd-deploy" successfully rolled out
+
+#  kubectl rollout undo deployment/httpd-deploy
+# deployment.apps/httpd-deploy rolled back
+# kubectl rollout undo --to-revision=2 deployment/httpd-deploy
