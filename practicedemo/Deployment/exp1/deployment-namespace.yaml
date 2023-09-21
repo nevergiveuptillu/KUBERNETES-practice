@@ -2,26 +2,26 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: prod
+  name: dev
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ds-deploy
-  namespace: prod
+  namespace: dev
   annotations:
     kubernetes.io/change-cause: "image updated to v1.0"
 spec:
   minReadySeconds: 1
-  replicas: 10
+  replicas: 4
   selector:
     matchLabels:
       app: web
   strategy:
     type: RollingUpdate
     rollingUpdate:
-      maxSurge: 30%
-      maxUnavailable: 20%
+      maxSurge: 25%
+      maxUnavailable: 25%
   template:
     metadata:
       labels:

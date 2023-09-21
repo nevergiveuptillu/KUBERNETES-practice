@@ -1,4 +1,3 @@
----
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
@@ -17,20 +16,19 @@ spec:
         app: 'nginx'
     spec:
       containers:
-        - name: nginx
-          image: nginx
-          ports:
-            - containerPort: 80
-          volumeMounts:
-            - name: htmlhome
-              mountPath: /usr/share/nginx/html
-  volumeClaimTemplates:
-    - metadata:
-        name: htmlhome
-      spec:
-        accessModes: 
-          - ReadWriteOnce
-        resources:
-          requests:
-            storage: 1Gi
-        storageClassName: managed
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80
+  #         volumeMounts:
+#           - name: htmlhome
+#             mountPath: /usr/share/nginx/html
+# volumeClaimTemplates:
+#   - metadata:
+#       name: htmlhome
+#     spec:
+#       accessModes:  [ "ReadWriteOnce" ]
+#       resources:
+#         requests:
+#           storage: 1Gi
+#       # storageClassName: 'gp2'
