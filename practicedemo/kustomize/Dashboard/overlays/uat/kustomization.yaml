@@ -3,8 +3,9 @@
 ---
 resources:
   - ../../base
+  - ../../base/namespaces.yaml
 
 namespace: qa
 
-nameSuffix: qa-
+namePrefix: qa-
 

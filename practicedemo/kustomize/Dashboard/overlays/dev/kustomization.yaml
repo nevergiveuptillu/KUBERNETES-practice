@@ -6,5 +6,5 @@ resources:
 
 namespace: dev
 
-nameSuffix: dev-
+namePrefix: dev-
 
