@@ -3,6 +3,7 @@
 ---
 resources:
   - ../../base
+  - ../../base/namespaces.yaml
   
 namespace: uat
 
