@@ -2,7 +2,7 @@
 # kind: Kustomization
 ---
 bases:
-  - ../../bases
+  - ../../base
 
 namespace: qa
 
