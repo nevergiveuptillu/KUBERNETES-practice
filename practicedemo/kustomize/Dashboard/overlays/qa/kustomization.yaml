@@ -4,7 +4,7 @@
 resources:
   - ../../base
   
-# namespace: uat
+namespace: uat
 
 nameSuffix: uat-
 
