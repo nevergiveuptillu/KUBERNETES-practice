@@ -3,7 +3,7 @@
 ---
 resources:
   - ../../base
-  - ../../base/namespaces.yaml
+  
 namespace: dev
 
 namePrefix: dev-

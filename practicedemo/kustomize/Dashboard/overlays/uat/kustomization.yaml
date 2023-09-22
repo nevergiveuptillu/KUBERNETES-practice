@@ -1,9 +1,7 @@
 # apiVersion: Kustomize.config.k8s.io/v1beta1 
 # kind: Kustomization
----
 resources:
-  - ../../base
-  - ../../base/namespaces.yaml
+- ../../base
 
 namespace: qa
 
