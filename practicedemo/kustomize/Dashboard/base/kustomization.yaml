@@ -4,3 +4,4 @@ resources:
   - service.yaml
   - hpa.yaml
   - namespaces.yaml
+
