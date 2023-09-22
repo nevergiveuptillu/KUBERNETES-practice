@@ -7,3 +7,8 @@ namespace: qa
 
 namePrefix: qa-
 
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: qa
