@@ -3,5 +3,7 @@ resources:
   - deployment.yaml
   - service.yaml
   - hpa.yaml
-  - namespaces.yaml
-
+  - devnamespaces.yaml
+  - qanamespaces.yaml
+  - uatnamespaces.yaml
+  
