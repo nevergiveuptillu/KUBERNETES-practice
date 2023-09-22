@@ -3,7 +3,7 @@
 resources:
 - ../../base
 
-namespace: qa
+namespace: qa1
 
 namePrefix: qa-
 

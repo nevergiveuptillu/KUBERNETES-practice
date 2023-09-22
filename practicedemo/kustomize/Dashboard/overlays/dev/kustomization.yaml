@@ -3,8 +3,8 @@
 ---
 resources:
   - ../../base
-  
-namespace: dev
+
+namespace: dev1
 
 namePrefix: dev-
 
