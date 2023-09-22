@@ -4,7 +4,7 @@
 resources:
   - ../../base
 
-namespace: qa
+# namespace: qa
 
 nameSuffix: qa-
 
