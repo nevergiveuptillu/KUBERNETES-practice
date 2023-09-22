@@ -3,12 +3,6 @@
 resources:
 - ../../base
 
-namespace: uat
+namespace: qa
 
-namePrefix: uat-
-
----
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: uat
+namePrefix: qa-

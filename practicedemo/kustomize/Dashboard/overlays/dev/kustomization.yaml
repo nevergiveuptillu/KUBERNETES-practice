@@ -3,13 +3,8 @@
 ---
 resources:
   - ../../base
+  - namespace.yaml
 
 namespace: dev
 
 namePrefix: dev-
-
----
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: uat
