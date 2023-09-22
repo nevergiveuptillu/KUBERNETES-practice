@@ -2,16 +2,16 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: dev1
+  name: dev
 
 ---
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: uat1
+  name: uat
 
 ---
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: qa1
+  name: qa

@@ -3,7 +3,7 @@
 resources:
 - ../../base
 
-namespace: uat1
+namespace: uat
 
 namePrefix: uat-
 

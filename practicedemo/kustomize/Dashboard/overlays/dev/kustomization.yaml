@@ -4,7 +4,7 @@
 resources:
   - ../../base
 
-namespace: dev1
+namespace: dev
 
 namePrefix: dev-
 
